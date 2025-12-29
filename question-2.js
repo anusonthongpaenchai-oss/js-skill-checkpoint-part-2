@@ -7,3 +7,10 @@ const students = [
 ];
 
 // เริ่มเขียนโค้ดตรงนี้
+const result = students
+                .filter((arr) => arr.score > 50)
+                .map((arr) => arr.score * 1.1)
+                .reduce((acc, cur) => acc + cur)
+                .toFixed(1)
+
+console.log(`Total score is ${result}`)
